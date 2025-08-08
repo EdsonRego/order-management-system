@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
 @Entity
+@Table(name = "orders") // <-- evita conflito com palavra reservada
 @Data
 public class Order {
     @Id

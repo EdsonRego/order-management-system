@@ -10,6 +10,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 
+/**
+ * Serviço simples de usuário para testes.
+ * Em produção você buscaria usuários do banco (UserRepository).
+ *
+ * - Retorna um usuário "admin" com senha codificada pelo PasswordEncoder.
+ */
 @Service
 public class MyUserDetailsService implements UserDetailsService {
 
@@ -19,9 +25,10 @@ public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         if ("admin".equals(username)) {
+            // senha = "password" codificada com BCrypt
             return User.builder()
                     .username("admin")
-                    .password(passwordEncoder.encode("password"))  // codifica a senha
+                    .password(passwordEncoder.encode("password"))
                     .authorities(Collections.emptyList())
                     .build();
         }

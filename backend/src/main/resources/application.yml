@@ -21,7 +21,7 @@ spring:
     password: guest
 
 jwt:
-  secret: mysecretkey1234567890
+  secret: XbFzfrbK73n2jA3fGxqY5B9X7Tf2E9U7np2yL3cOqG2s3Tz6hU5qZ7e8oQ2vR3tYxP9wZ7fX8vL9mQ1sW3hP6nR4jV2yU3tF8
   expiration: 3600000 # 1 hora em milissegundos
 
 logging:
